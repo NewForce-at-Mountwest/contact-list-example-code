@@ -1,34 +1,40 @@
 // A ContactForm component that, when filled out and a submit button is pressed, adds a new contact to storage. It should import the ContactCollection component.
 import ContactCollection from "./ContactCollection";
+import buildContactObject from "./ContactObjectBuilder";
+import ContactList from "./ContactList";
+
 const ContactForm = {
   buildForm: () => {
-    return `<form action="" id="contact-form">
+    return `
+    <div class="form" id="contact-form">
+      <h3>Add a New Contact</h3>
+      <form action="">
         <input type="text" id="contact-name" placeholder="Name">
         <input type="tel" id="contact-phone" placeholder="Phone">
         <input type="email" id="contact-email" placeholder="Email">
-    </form>
-    <button id="save-contact">Save Contact</button>`;
+      </form>
+      <button id="save-contact">Save Contact</button>
+    </div>`;
   },
-  saveContact: () => {
+  activateSaveButton: () => {
       document.querySelector(".output").addEventListener("click", () => {
         if(event.target.id === "save-contact"){
+
+            // Get the user's input
             const nameVal = document.querySelector("#contact-name").value;
             const phoneVal = document.querySelector("#contact-phone").value;
             const emailVal = document.querySelector("#contact-email").value;
 
-            const contactObject = {
-                name: nameVal,
-                phone: phoneVal,
-                email: emailVal
-            }
+            // Turn the user's input into an object
+            const objectToPost = buildContactObject(nameVal, phoneVal, emailVal)
 
-            ContactCollection.saveNewContact(contactObject)
+            // Save the object to our database
+            ContactCollection.saveNewContact(objectToPost)
             .then(() => {
-                return ContactCollection.getAllContacts()
+                // Once the POST is complete, print all the contacts again
+                ContactList();
             })
-            .then((contacts) => {
-                console.log(contacts)
-            })
+
         }
 
       })
