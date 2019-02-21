@@ -1,16 +1,17 @@
-// // In main.js, import the ContactList component and the ContactForm component.
-import ContactList from "./ContactList.js"
-import ContactForm from "./ContactForm.js"
+import loginHandler from "./auth/login"
 
 
-// Builds Contact Form
-document.querySelector(".output").innerHTML = ContactForm.buildForm();
+/* This module is the entry point for the application and runs when the page loads */
 
-// Adds event listener to save button
-ContactForm.activateSaveButton()
+// Display the login form
+document.querySelector("#form-output").innerHTML = loginHandler.renderLoginForm();
 
-// Builds Contact List
-ContactList();
+// Activate login button
+loginHandler.activateLoginButton();
+
+// Activate button that takes you to the register form
+loginHandler.activateRegisterButton();
+
 
 
 

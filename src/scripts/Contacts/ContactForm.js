@@ -1,5 +1,5 @@
 // A ContactForm component that, when filled out and a submit button is pressed, adds a new contact to storage. It should import the ContactCollection component.
-import ContactCollection from "./ContactCollection";
+import ContactCollection from "../data/ContactCollection";
 import buildContactObject from "./ContactObjectBuilder";
 import ContactList from "./ContactList";
 
@@ -17,7 +17,7 @@ const ContactForm = {
     </div>`;
   },
   activateSaveButton: () => {
-      document.querySelector(".output").addEventListener("click", () => {
+      document.querySelector("#form-output").addEventListener("click", () => {
         if(event.target.id === "save-contact"){
 
             // Get the user's input
@@ -33,6 +33,12 @@ const ContactForm = {
             .then(() => {
                 // Once the POST is complete, print all the contacts again
                 ContactList();
+
+                // Clear the form values
+                document.querySelector("#contact-name").value = "";
+                document.querySelector("#contact-phone").value = "";
+                document.querySelector("#contact-email").value = "";
+
             })
 
         }
