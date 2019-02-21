@@ -1,58 +1,5 @@
 {
   "contacts": [
-    {
-      "name": "fjdlfj",
-      "phone": "dklafjal",
-      "email": "alkdjflkaf",
-      "id": 1
-    },
-    {
-      "name": "afkjdsalkf",
-      "phone": "fkladjfl",
-      "email": "lsdakjflaksf",
-      "id": 2
-    },
-    {
-      "name": "adfads",
-      "phone": "adfd",
-      "email": "adfas",
-      "id": 3
-    },
-    {
-      "name": "",
-      "phone": "",
-      "email": "",
-      "id": 4
-    },
-    {
-      "name": "dfad",
-      "email": "adf",
-      "phone": "adsfafd",
-      "id": 5
-    },
-    {
-      "name": "aflkjd",
-      "email": "dsalkfja",
-      "phone": "ADFLKJAS",
-      "id": 6
-    },
-    {
-      "name": "aflkjd",
-      "email": "dsalkfja",
-      "phone": "ADFLKJAS",
-      "id": 7
-    },
-    {
-      "name": "P",
-      "email": "P",
-      "phone": "P",
-      "id": 8
-    },
-    {
-      "name": "dafd",
-      "email": "daa",
-      "phone": "dadfad",
-      "id": 9
-    }
+
   ]
 }
