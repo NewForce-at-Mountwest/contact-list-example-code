@@ -1,6 +1,6 @@
 import UserCollection from "../data/UserCollection"
-import registerHandler from "./register"
-import loadPageAfterLogin from "./loadPageAfterLogin"
+import registerHandler from "./Register"
+import loadPageAfterLogin from "./LoadPageAfterLogin"
 
 
 

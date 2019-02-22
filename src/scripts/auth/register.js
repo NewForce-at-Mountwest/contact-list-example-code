@@ -1,5 +1,5 @@
 import UserCollection from "../data/UserCollection"
-import loadPageAfterLogin from "./loadPageAfterLogin";
+import loadPageAfterLogin from "./LoadPageAfterLogin";
 
 
 const registerHandler = {
