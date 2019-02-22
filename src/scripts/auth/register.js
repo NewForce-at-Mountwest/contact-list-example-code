@@ -31,6 +31,7 @@ const registerHandler = {
             console.log(userObject);
             UserCollection.addNewUser(userObject)
             .then((parsedUser)=> {
+                console.log("this is parsed user in register", parsedUser);
                 sessionStorage.setItem("userId", parsedUser.id)
                 loadPageAfterLogin();
             })

@@ -3,8 +3,12 @@ const logOutHandler = {
         return `<button id="logout">Logout</button>`
     },
     activateLogOutButton: () => {
-        document.querySelector("#logout").addEventListener("click", () => {
-            sessionStorage.removeItem("userId")
+        debugger;
+        document.querySelector("#form-output").addEventListener("click", () => {
+            if(event.target.id === "logout"){
+                sessionStorage.removeItem("userId")
+                
+            }
         })
     }
 }

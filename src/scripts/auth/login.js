@@ -3,7 +3,6 @@ import registerHandler from "./Register"
 import loadPageAfterLogin from "./LoadPageAfterLogin"
 
 
-
 const loginHandler = {
     renderLoginForm: () => {
         return `
@@ -26,6 +25,7 @@ const loginHandler = {
         // Look up the user's information in the db based on their user name
         UserCollection.getUserByUserName(userNameVal)
         .then((parsedUser) => {
+          console.log(parsedUser);
           parsedUser = parsedUser[0];
 
           // Check to make sure their password matches

@@ -1,6 +1,6 @@
 import ContactList from "../Contacts/ContactList"
 import ContactForm from "../Contacts/ContactForm"
-import logOutHandler from "./logout"
+import logOutHandler from "./LogOut"
 
 // This module builds the contact list view once a user has logged in
 const loadPageAfterLogin = () => {
@@ -11,7 +11,7 @@ logOutHandler.activateLogOutButton();
 //Builds Contact Form
 document.querySelector("#form-output").innerHTML += ContactForm.buildForm();
 // Adds event listener to save button
-ContactForm.activateSaveButton()
+ContactForm.activateSaveButton();
 
 // Builds Contact List
 ContactList();
