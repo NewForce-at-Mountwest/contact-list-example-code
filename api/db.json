@@ -67,6 +67,12 @@
       "username": "new",
       "password": "new",
       "id": 4
+    },
+    {
+      "name": "emily lemmon",
+      "username": "emlem",
+      "password": "e",
+      "id": 5
     }
   ]
 }
