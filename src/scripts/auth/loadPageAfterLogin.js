@@ -1,6 +1,8 @@
 import ContactList from "../Contacts/ContactList"
 import ContactForm from "../Contacts/ContactForm"
 import logOutHandler from "./LogOut"
+import activateDeleteButtons from "../Contacts/DeleteContact"
+import activateEditButtons from "../Contacts/EditForm";
 
 // This module builds the contact list view once a user has logged in
 const loadPageAfterLogin = () => {
@@ -15,6 +17,11 @@ ContactForm.activateSaveButton();
 
 // Builds Contact List
 ContactList();
+
+// Activate Delete Buttons
+activateDeleteButtons();
+// Activate Edit Buttons
+activateEditButtons();
 
 }
 

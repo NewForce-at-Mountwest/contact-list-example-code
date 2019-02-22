@@ -9,11 +9,11 @@ const ContactForm = {
     <div class="form" id="contact-form">
       <h3>Add a New Contact</h3>
       <form action="">
-        <input type="text" id="contact-name" placeholder="Name">
-        <input type="tel" id="contact-phone" placeholder="Phone">
+        <input type="text"  id="contact-name" placeholder="Name">
+        <input type="tel"  id="contact-phone" placeholder="Phone">
         <input type="email" id="contact-email" placeholder="Email">
       </form>
-      <button id="save-contact">Save Contact</button>
+       <button id="save-contact">Save Contact</button>
     </div>`;
   },
   activateSaveButton: () => {
